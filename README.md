@@ -1,66 +1,93 @@
-🏦 Simple Bank Account Management System (C++)
-This is a basic Bank Account Management System implemented in C++. It allows creating and managing bank accounts for multiple users with features like deposit, withdrawal, FDR (Fixed Deposit Receipt), and DPS (Deposit Pension Scheme).
+# 💰 Simple Bank Account Management System (C++)
 
-🚀 Features
-Create multiple bank accounts (predefined names)
+This is a basic **Bank Account Management System** written in **C++**. It simulates simple banking operations like **deposit**, **withdrawal**, **Fixed Deposit Receipts (FDR)**, and **Deposit Pension Schemes (DPS)** for multiple users.
 
-Deposit and withdraw money
+---
 
-Create FDR with 8% annual interest
+## 🚀 Features
 
-Create DPS with 6% interest over the full duration
+- Create bank accounts for multiple users  
+- Deposit and withdraw money  
+- Create Fixed Deposit Receipt (FDR) with interest  
+- Create Deposit Pension Scheme (DPS) with monthly deposits and interest  
+- Display user account details  
 
-Display all user details
+---
 
-🧾 Functionalities
-setDetails(name, accountNumber, balance) – Initialize user account
+## 🛠️ Technologies Used
 
-deposit(amount) – Add money to balance
+- **Language:** C++  
+- **Compiler:** Any C++17 compatible compiler (e.g., `g++`, MSVC)  
+- **Standard Library:** `<iostream>`, string manipulation  
 
-withdraw(amount) – Subtract money from balance (if sufficient)
+---
 
-createFDR(amount, years) – Fixed deposit with 8% annual interest
+## 🧪 Example Output
 
-createDPS(monthlyAmount, years) – Monthly deposit scheme with 6% total interest
+Abdul Malek deposited 500. New balance: 1500
+Abdul Malek withdrew 200. New balance: 1300
+Abdul Malek created FDR for 2 years. Maturity amount: 1416
+Abdul Malek created DPS for 3 years. Total after maturity: 3816
 
-showDetails() – View user details
-
-📁 How to Run
-Clone the repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-Compile the code:
-
-bash
-Copy
-Edit
-g++ -o bank BankAccount.cpp
-Run the executable:
-
-bash
-Copy
-Edit
-./bank
-🧑‍💻 Example Output
-yaml
-Copy
-Edit
-Abir Mollik deposited 500. New balance: 1500
-Abir Mollik withdrew 200. New balance: 1300
-Abir Mollik created FDR for 2 years. Maturity amount: 1816
-Abir Mollik created DPS for 3 years. Total after maturity: 3816
-...
 All User Details:
-Name: Abir Mollik, Account No: 1001, Balance: 600
-...
-🛠️ Technologies Used
-C++
+Name: Abdul Malek, Account No: 1001, Balance: 600
+Name: Firoz Hossain, Account No: 1002, Balance: 1000
+Name: Sahadat Ali, Account No: 1003, Balance: 1000
+Name: Abdul Kader, Account No: 1004, Balance: 1000
+Name: Eusuf Khan, Account No: 1005, Balance: 1000
+Name: Salman Khan, Account No: 1006, Balance: 1000
+Name: Rabeya Akter, Account No: 1007, Balance: 1000
+Name: Ivory Khatun, Account No: 1008, Balance: 1000
+Name: Polash Saha, Account No: 1009, Balance: 1000
+Name: Indubati, Account No: 1010, Balance: 1000
 
-Standard Template Library (STL)
+## 👨‍💻 How It Works
 
-g++
+Each user is represented as a `BankAccount` object with the following attributes:
 
+- `name`  
+- `accountNumber`  
+- `balance`  
+- `fdrAmount`  
+- `dpsMonthly`  
+
+### Available Methods:
+
+- `setDetails(name, accNo, balance)`  
+- `deposit(amount)`  
+- `withdraw(amount)`  
+- `createFDR(amount, years)`  
+- `createDPS(monthlyAmount, years)`  
+- `showDetails()`  
+
+---
+
+## 📁 File Structure
+📦BankAccountSystem
+└── main.cpp # Main source file
+
+## 🧾 Interest Rates
+
+- **FDR Interest:** 8% per year  
+- **DPS Interest:** 6% total on accumulated monthly deposits  
+
+---
+
+## 📦 How to Compile & Run
+
+### On Linux/macOS:
+
+```bash
+g++ main.cpp -o bank
+./bank
+On Windows (Git Bash or PowerShell):
+bash
+Copy
+Edit
+g++ main.cpp -o bank.exe
+./bank.exe
+📜 License
+This project is open-source and free to use. No restrictions.
+
+👤 Author
+Developed by Sandeepan Chakraborty
